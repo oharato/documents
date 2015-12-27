@@ -24,3 +24,4 @@ IoT p
 ASCII.jp：さくらインターネットがIoT参入を電撃公表！ http://ascii.jp/elem/000/001/097/1097584/
 
 test
+test2
