@@ -22,3 +22,5 @@ IoT p
 試作から量産まで幅広くカバーしたIoT開発モジュール「BlueNinja」発表 | Cerevoからのお知らせ https://info-blog.cerevo.com/2015/07/28/1219/
 
 ASCII.jp：さくらインターネットがIoT参入を電撃公表！ http://ascii.jp/elem/000/001/097/1097584/
+
+test
