@@ -14,7 +14,7 @@ body {
   background-color: rgb(254,246,227); }
 
 .bg-image {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(62,64,87,0.9);
   color: rgb(254,246,227);
 }
 
@@ -213,26 +213,27 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #2a76dd;
+  color: rgb(50,180,144);
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #6ca0e8;
+  color: rgb(46, 204, 113);
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: rgb(254,246,227);
-  background: #1a53a1; }
-
-.reveal em a {
   color: rgb(50,180,144);
 }
-.reveal em a:hover {
-  color: rgb(46, 204, 113);
+
+.reveal .bg-green a {
+  color: rgb(254,246,227);
+}
+.reveal .bg-green a:hover {
+  color: rgb(236, 240, 241);
 }
 
 /*********************************************
