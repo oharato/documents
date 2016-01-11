@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>キーワードで振り返る2015年のIoTトピックス</title>
+		<title>キーワードで振り返る2015年IoTトピックス</title>
 
-		<meta name="description" content="キーワードで振り返る2015年のIoTトピックス">
+		<meta name="description" content="キーワードで振り返る2015年IoTトピックス">
 		<meta name="author" content="@oharato">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -46,7 +46,7 @@
 				<script type="text/template">
 
 <!-- .slide: class="center tl-l"  -->
-# キーワードで<br>振り返る<br>2015年の<br>IoTトピックス
+# キーワードで<br>振り返る<br>2015年<br>IoTトピックス
 
 ---
 
@@ -60,10 +60,9 @@
     - 10-09 AWS Iot
     - 11-25 Raspberry Pi Zero
     - 12-24 さくらのIoT Platform(仮称)
-    - MQTT
-    - NodeRed
-    - ブロックチェーン
     - 2016年の期待
+    - おまけ
+        - MQTT, NodeRed, ブロックチェーン
 
 ---
 
@@ -95,20 +94,16 @@
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### Windows10 IoT Core
 - 4月29日 マイクロソフトの技術カンファレンス「Build 2015」で発表
-- 8月10日 正式版の無償ダウンロード開始
 - Microsoft製の組込みOS
     - Windows10のようなデスクトップ環境無し。
-    - GUI有りのユニバーサルWindowsアプリが動作。
 
 ---
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### Windows10 IoT Core
-- 対応するボード
-    - Raspberry Pi 2, MinnowBoard Max, DragonBoard410c
 - 開発するには
-    - Windows 10のPCでWindows10 Iot CoreのディスクイメージをSDカードに書き込む
-    - Visual Studio 2015が必要
+    - <em>Windows 10</em>のPCでWindows10 Iot CoreのディスクイメージをSDカードに書き込む
+    - <em>Visual Studio 2015</em>が必要
 - 個人的には、環境構築や開発が面倒
 
 ---
@@ -120,8 +115,14 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### ESP8266
-- ESP8266を使ったWiFiモジュールの一つ、「ESP-WROOM-02」が7月に発売開始
-    - ![](./esp8266.jpg)
+- ESP8266(Espressif Systems社のワイヤレスSoC/System-on-a-chip)を使ったWi-Fiモジュールの一つ、「ESP-WROOM-02」が7月に発売開始
+    - ![](esp8266.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### ESP8266
+- 秋月電子で650円
 - Arduino用のWiFiモジュールとしても使用でき、単体でWiFi搭載のArduinoマイコンとしても使用できる
 
 ---
@@ -137,6 +138,11 @@
 - ヤフーが提供する、IoTプラットフォームおよびスマホアプリ
 - 自作のデバイスやガジェット、Webサービス(myThingsではチャンネルと呼ぶ)を組み合わせる
 - Webサービス同士を連携させるWebサービス「IFTTT」の日本版とよく言われている
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black"  -->
+![](mythings_channels_trigger.jpg)
 
 ---
 
@@ -158,30 +164,34 @@
 ---
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### myThingsのチャンネル ガジェット
-- BOCCO 家族をつなぐコミュニケーションロボット  
-![](bocco.jpg)
+### myThingsのチャンネル
+- ガジェット
+    - Hackey - Webサービスをコントロールできるキースイッチ
+    - ![](hackey.jpg)
 
----
-
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### myThingsのチャンネル ガジェット
-- ともだち家電 シャープ  
-![](tomodachikaden.png)
-
----
+--
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### myThingsのチャンネル ガジェット
-- iRemocon  
-![](iremocon.jpg)
+### myThingsのチャンネル
+- ガジェット
+    - BOCCO 家族をつなぐコミュニケーションロボット
+    - ![](bocco.jpg)
 
----
+--
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### myThingsのチャンネル ガジェット
-- Hackey - Webサービスをコントロールできるキースイッチ  
-![](hackey.jpg)
+### myThingsのチャンネル
+- ガジェット
+    - ともだち家電 シャープ
+    - ![](tomodachikaden.png)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- ガジェット
+    - iRemocon
+    - ![](iremocon.jpg)
 
 ---
 
@@ -200,8 +210,8 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### SORACOM
-- MVNO事業者が持つハードウェア(パケット交換、回線管理、帯域制御、顧客管理、課金)を、AWS上でソフトウェアで実装  
-![](./soracom_air.jpg)
+- MVNO事業者が持つハードウェア(パケット交換、回線管理、帯域制御、顧客管理、課金)を、AWS上でソフトウェアで実装
+- ![](soracom_air.jpg)
 
 ---
 
@@ -217,11 +227,6 @@
 ### SORACOM Air
 - 初期費用
     - データ通信のみのSIM 888円(税込)
-
----
-
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### SORACOM Air
 - 基本料金(税別)
     - 1日10円(データ通信のみ)
 
@@ -229,11 +234,11 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### SORACOM Air
-- 従量課金(税別)
+- 従量課金(税別)→<em>上りが安い</em>
     - 通常時間帯（日本時間 06:00-26:00）
         - 最遅…上り0.2 円 / MB、下り0.6 円 / MB(上り下り共に32kbps)
         - 最速…上り0.3 円 / MB、下り1.0 円 / MB(上り下り共に2Mbps)
-    - 深夜時間帯（日本時間 02:00-06:00）
+    - 深夜時間帯（日本時間 02:00-06:00）→<em>夜が安い</em>
         - 最遅…上り0.2 円 / MB、下り0.2 円 / MB(上り下り共に32kbps)
         - 最速…上り0.2 円 / MB、下り0.2 円 / MB(上り下り共に2Mbps)
 
@@ -272,13 +277,11 @@
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### SORACOM Beam
 - データ転送支援サービス
-    - 暗号化  
-        ![](./soracom_beam.png)
+    - 暗号化
+        - ![](./soracom_beam.png)
         - クライアント証明書をBeamで管理
-    - ヘッダ付与
-        - SIMのIDを追加
-    - ルーティング
-        - コンソールなどで接続先を変更
+            - デバイスに証明書を入れなくて良くなる
+            - デバイスの暗号化処理をオフロード
 
 ---
 
@@ -342,6 +345,22 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### Raspberry Pi Zero
+- Pi Zero + Adaptors + Pibow Zero Case
+- ![](raspizero.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
+- Pimoroniで12月14日に発注
+- 12月27日到着
+- £9.58 + Shipping £4.00 = £13.58(￥2602)
+- 600円くらいで買えると思ったら4倍くらいかかった
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
 - 11月25日発表
 - 特徴
     - 安い(5ドル)
@@ -363,22 +382,6 @@
 
 ---
 
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### Raspberry Pi Zero
-- Pi Zero + Adaptors + Pibow Zero Case  
-![](./raspizero.jpg)
-
----
-
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### Raspberry Pi Zero
-- Pimoroniで12月14日に発注
-- 12月27日到着
-- £9.58 + Shipping £4.00 = £13.58(￥2602)
-- 600円くらいで買えると思ったら4倍くらいかかった
-
----
-
 <!-- .slide: class="center"  -->
 # さくらのIoT Platform
 
@@ -386,8 +389,8 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### さくらのIoT Platform
-- 12月24日発表、2016年2月にテスター募集、春にβテスト  
-![](sakura-iot-platform.jpg)
+- 12月24日発表、2016年2月にテスター募集、春にβテスト
+- ![](sakura-iot-platform.jpg)
 
 ---
 
@@ -418,6 +421,33 @@
 ---
 
 <!-- .slide: class="center"  -->
+# 2016年の期待
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### 格安のモバイル通信(3G, LTE)モジュール
+- SORACOMの登場で、SIMは安く入手できるが、SIMモジュールが高い
+    - 3GIM 23,760円
+    - 3GPI 29,800円
+    - L-02C 2,000～3,500円
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### IoT用の電源
+- 小型大容量の電池
+- ワイヤレス給電
+    - [10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース](http://headlines.yahoo.co.jp/hl?a=20151222-00000068-impress-sci "10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース")
+
+---
+
+<!-- .slide: class="center"  -->
+# おしまい
+
+---
+
+<!-- .slide: class="center"  -->
 # MQTT
 
 ---
@@ -432,8 +462,8 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### MQTT
-- Pub/Subモデルのシステム  
-![](mqtt.png)
+- Pub/Subモデルのシステム
+- ![](mqtt.png)
 
 --
 
@@ -498,8 +528,8 @@
 
 <!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
 ### Node-RED
-- ブラウザ上で動作するフローエディタ  
-    ![](node-red.png)
+- ブラウザ上で動作するフローエディタ
+    - ![](node-red.png)
     - ノード(ハードウェアデバイス、API、Webサービス)を繋いでシステムを構築
 
 ---
@@ -532,35 +562,6 @@
     - 取引情報(トランザクション、AさんがBさんに3ビットコイン送った)、前のブロックのハッシュが含まれる
     - トランザクションはP2Pネットワーク全体で共有される
     - 前のブロックのハッシュを含むことでブロックがチェーン状に繋がり、ブロックが改ざんされにくくなる
-
-
----
-
-<!-- .slide: class="center"  -->
-# 2016年の期待
-
----
-
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### 格安のモバイル通信(3G, LTE)モジュール
-- SORACOMの登場で、SIMは安く入手できるが、SIMモジュールが高い
-    - 3GIM 23,760円
-    - 3GPI 29,800円
-    - L-02C 2,000～3,500円
-
----
-
-<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
-### IoT用の電源
-- 小型大容量の電池
-- ワイヤレス給電
-    - [10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース](http://headlines.yahoo.co.jp/hl?a=20151222-00000068-impress-sci "10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース")
-
----
-
-<!-- .slide: class="center"  -->
-# おしまい
-
 
 				</script>
 			</section>
