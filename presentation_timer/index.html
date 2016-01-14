@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentation Timer</title>
+</head>
+<body>
+    <h1>05:00</h1>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.slabtext.min.js"></script>
+<script>
+      function slabTextHeadlines() {
+              $("h1").slabText();
+      };
+      $(function(){
+              setTimeout(slabTextHeadlines, 100);
+      });
+</script>
+</html>
