@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Presentation Timer</title>
+  <meta charset="UTF-8">
+  <title>Presentation Timer</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>05:00</h1>
-</body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <h1>hoge</h1>
+  <div id="start" class="btn">START</div>
+  <div id="stop" class="btn">STOP</div>
+  <div id="reset" class="btn">RESET</div>
+  <div id="bell" class="btn">BELL</div>
+  <div id="setting" class="btn">SETTING</div>
+  <audio id="sound" preload="auto">
+    <source src="sound/bell.mp3" type="audio/mp3">
+    <source src="sound/bell.aac" type="audio/aac">
+    <source src="sound/bell.wav" type="audio/wav">
+  </audio>
+  <div id="modal-overlay"></div>
+  <div id="modal-content">
+    <ul>
+      <li>
+        <label>
+          <span>total time</span>
+          <input type="number" value="3" min="0" max="999">
+          :
+          <input type="number" value="0" min="0" max="59">
+        </label>
+      </li>
+      <li>
+        <label>
+          <span>countdown</span>
+          <input type="checkbox" value="true" name="countdown">
+        </label>
+      </li>
+      <li>
+        <label>
+          <span>1st bell</span>
+          <input type="number" value="3" min="0" max="999">
+          :
+          <input type="number" value="0" min="0" max="59">
+        </label>
+      </li>
+      <li>
+        <label>
+          <span>2nd bell</span>
+          <input type="number" value="4" min="0" max="999">
+          :
+          <input type="number" value="0" min="0" max="59">
+        </label>
+      </li>
+      <li>
+        <label>
+          <span>3rd bell</span>
+          <input type="number" value="5" min="0" max="999">
+          :
+          <input type="number" value="0" min="0" max="59">
+        </label>
+      </li>
+      <li>
+        <label>
+          <span>stop at</span>
+          <label>
+            <span>none</span>
+            <input type="radio" value="0" name="stop_at">
+          </label>
+          <label>
+            <span>1st</span>
+            <input type="radio" value="1" name="stop_at">
+          </label>
+          <label>
+            <span>2nd</span>
+            <input type="radio" value="2" name="stop_at">
+          </label>
+          <label>
+            <span>3rd</span>
+            <input type="radio" value="3" name="stop_at">
+          </label>
+          <label>
+            <span>total time end</span>
+            <input type="radio" value="4" name="stop_at">
+          </label>
+        </label>
+      </li>
+    </ul>
+    <p><a id="modal-close" class="button-link">閉じる</a></p>
+  </div>
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/index.js"></script>
 <script src="js/jquery.slabtext.min.js"></script>
-<script>
-      function slabTextHeadlines() {
-              $("h1").slabText();
-      };
-      $(function(){
-              setTimeout(slabTextHeadlines, 100);
-      });
-</script>
+</body>
 </html>
