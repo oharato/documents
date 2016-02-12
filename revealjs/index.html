@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>プレゼン置き場</title>
+
+		<meta name="description" content="プレゼン置き場">
+		<meta name="author" content="@oharato">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/azusaish.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section id=""
+				data-markdown=""
+				data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n"
+				data-charset="utf-8">
+				<script type="text/template">
+<!-- .slide: class="center"  -->
+## プレゼン目次
+- [2016年](?md=2016/table_of_contents.md)
+
+
+
+<!-- .slide: class="tl-l"  -->
+## プレゼンの使い方(Windows)
+- start_nginx.batをダブルクリック
+    - nginxが起動して、index.htmlが開きます
+    - 終了するときはstop_nginx.batをダブルクリックしてnginxプロセスを終了(プロセスが残っていたらタスクマネージャから終了)
+- URLのクエリに下記のようにmarkdownファイルを指定して読み込みます
+
+```
+?md=2016/HTML_Workshop/00_resume.md
+```
+
+
+<!-- .slide: class="tl-l"  -->
+## プレゼンの使い方(node.js版)
+1. nodeをインストールしておく
+    1. [Node.js](https://nodejs.org/en/) <- v4系でもv5系でも大丈夫そう(大原はv0.12系でした)
+1. padawanディレクトリに移動
+1. nodeのサーバを起動
+
+```
+# -C : allows cross origin access serving
+# デフォルトポートは3000。指定したかったら -p 8000 とか
+serve -C
+```
+
+
+- 要は、このindex.htmlからAjaxでmdファイルが取得できればOKです。
+    - CORS(Cross-Origin Resource Sharing)に対応する必要があります
+
+
+
+<!-- .slide: class="tl-l"  -->
+## プレゼンの書き方
+- markdown形式でプレゼンが書けます！
+- [サンプル](?md=lib/revealjs/sample.md)
+- 改行3つで次のページ
+- 文字を左揃えにしたい
+
+```
+<!-- .slide: class="tl-l"  -->
+```
+
+- 文字を上下中央揃えにしたい
+
+```
+<!-- .slide: class="center"  -->
+```
+
+				</script>
+			</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			function get_url_vars(){
+				var vars = {};
+				var params;
+				var temp_params = window.location.search.substring(1).split('&');
+				for(var i = 0; i <temp_params.length; i++) {
+					params = temp_params[i].split('=');
+					if(params[0]) {
+						vars[decodeURIComponent(params[0])] = decodeURIComponent((params[1]||"").replace(/\+/g, " "));
+					}
+				}
+				return vars;
+			}
+			var sectionMarkdown = document.getElementsByClassName("slides")[0].children[0];
+			var host = get_url_vars().host || 'http://localhost:3000/';
+			var md = get_url_vars().md;
+			// sample : http://localhost:3000/2016/HTML_Workshop/00_resume.md
+			if(md) sectionMarkdown.setAttribute('data-markdown', host+md);
+
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				slideNumber: 'c/t',
+				history: true,
+				center: false,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'none',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
