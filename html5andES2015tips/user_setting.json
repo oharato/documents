@@ -1,0 +1,4 @@
+{
+    "revealjs.separator": "^[\r\n?|\n][\r\n?|\n]$",
+    "revealjs.verticalSeparator": "^[\r\n?|\n]$"
+}

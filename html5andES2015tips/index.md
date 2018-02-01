@@ -3,28 +3,26 @@ theme : "white"
 customTheme : "azusaish"
 transition: "none"
 ---
-# タイトル
+# 業務に役立つHTML5とES2015の小ネタ集
 
 
 
-## hoge
+## きっかけ
 
-```json
-	"revealjs.separator": "^[\r\n?|\n][\r\n?|\n]$",
-	"revealjs.verticalSeparator": "^[\r\n?|\n]$"
-```
-
-- a
-- b
-- c
-
-
-## fuga
-aaaa
+- 新卒向けJS研修でJS力向上
+- app2のJSをjQueryなしで書くのがマイブーム
+- HTML5認定試験を勉強中
 
 
 
-## test
+## おことわり
+
+- 「業務」＝「app2」＝Chrome＆FF
+- IEなどでは基本的には使えない
+
+
+
+## 目次
 
 abc
 de
